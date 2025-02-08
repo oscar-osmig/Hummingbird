@@ -21,11 +21,16 @@ public class Hummingbird {
            String task = HelperTools.optionBoard();
             switch (task){
                 case "a": case "A":
-                    String answer = answerQuestion();
-                    if(answer.equals("null")){
-                        System.out.println("\nSorry I don't know the answer to that.");
+                    String question = answerQuestion();
+                    if(question.equals("null")){
+                        String userOwnAnswer = HelperTools.getAnswer("\nSorry I don't know the answer to that. " +
+                                "\nHow would you answer to this? ");
+                        if (!userOwnAnswer.equals("null")){
+                            String s = userQuestion + ", " + userOwnAnswer;
+                            HelperTools.writeToFile(s);
+                        }
                     }else {
-                        System.out.println(answer);
+                        System.out.println(question);
                     }
                     break;
 
@@ -44,10 +49,10 @@ public class Hummingbird {
 
 
     }
-
+    static String  userQuestion = "";
     private static String answerQuestion() throws IOException {
         // getting user's question
-       String userQuestion = HelperTools.getAnswer("What is your question? ");
+       userQuestion = HelperTools.getAnswer("What is your question? ");
        // checking if question is on the 'questionDictionary'
         questionDictionary = HelperTools.readFromFile("src/main/java/com/osmigesameem/data/questionDictionary.csv");
        if (questionDictionary.containsKey(userQuestion)){

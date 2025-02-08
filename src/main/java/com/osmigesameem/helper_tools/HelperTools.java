@@ -1,9 +1,6 @@
 package com.osmigesameem.helper_tools;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -20,7 +17,7 @@ public class HelperTools {
     }
 
     public static void introduceSelf(){
-        System.out.println("Hello, I'm Hummingbird. I can currently do the following: ");
+        System.out.println("\nHello, I'm Hummingbird. I can currently do the following: ");
     }
 
     public static String getAnswer(String q){
@@ -45,7 +42,15 @@ public class HelperTools {
                 map.put(question, answer);
             }
         }
+        br.close();
         return map;
+    }
+
+    public static void writeToFile(String s) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter("src/main/java/com/osmigesameem/data/questionDictionary.csv", true));
+        bw.write(s);
+
+        bw.close();
     }
 
     public static void main(String[] args) throws IOException {

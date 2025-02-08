@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7393cbd-5398-43cd-9052-611745c8ca5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_8_2025_3_05_AM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_8_2025_3_05_AM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/osmigesameem/data/questionDictionary.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/osmigesameem/Hummingbird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/osmigesameem/Hummingbird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/osmigesameem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/osmigesameem/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/osmigesameem/helper_tools/HelperTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/osmigesameem/helper_tools/HelperTools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
