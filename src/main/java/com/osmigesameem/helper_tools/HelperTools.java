@@ -4,13 +4,17 @@ import java.util.Scanner;
 
 public class HelperTools {
 
-    public static String introduceSelf(){
+    public static String optionBoard(){
         System.out.println(
-                "\nHello, I'm Hummingbird. I'm currently able to answer questions and ask you questions! " +
                  "\n  Enter (a) to ask questions" +
-                 "\n  or    (s) to get questioned");
+                 "\n        (s) to get questioned" +
+                 "\n  or    (q) to quit");
         String userChoice = getAnswer("\nYour choice: ");
         return userChoice;
+    }
+
+    public static void introduceSelf(){
+        System.out.println("Hello, I'm Hummingbird. I can currently do the following: ");
     }
 
     public static String getAnswer(String q){

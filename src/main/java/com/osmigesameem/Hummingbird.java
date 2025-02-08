@@ -8,29 +8,38 @@ public class Hummingbird {
     static HashMap<String, String> questionDictionary = new HashMap<>();
 
     public static void run(){
+        boolean running = true;
+        int counter = 0;
         // currently initialize the hashmap
         init();
-        // AI introduces itself and returns the first task
-        String task = HelperTools.introduceSelf();
+        // AI introduces itself
+        HelperTools.introduceSelf();
+        do {
+            // display option board and ask the first task
+           String task = HelperTools.optionBoard();
+            switch (task){
+                case "a": case "A":
+                    String answer = answerQuestion();
+                    if(answer.equals("null")){
+                        System.out.println("\nSorry I don't know the answer to that.");
+                    }else {
+                        System.out.println(answer);
+                    }
+                    break;
 
-        switch (task){
-            case "a": case "A":
-                String answer = answerQuestion();
-                if(answer.equals("null")){
-                    System.out.println("\nSorry I don't know the answer to that.");
-                }else {
-                    System.out.println(answer);
-                }
-                break;
+                case "s": case "S":
+                    questionUser();
+                    break;
+                case "q": case "Q":
+                    running = false;
+                    System.out.println("\nBye bye ...");
+                    break;
+                default:
+                    System.out.println("\nI did not understand what you just typed...");
 
-            case "s": case "S":
-                questionUser();
-                break;
+            }
+        }while (running);
 
-            default:
-                System.out.println("\nI did not understand what you just typed...");
-
-        }
 
     }
 
@@ -56,6 +65,6 @@ public class Hummingbird {
 
 
     private static void init(){
-        questionDictionary.put("Who are you?", "I'm Hummingbird");
+        questionDictionary.put("Who are you?", "I'm Hummingbird.");
     }
 }
