@@ -2,16 +2,18 @@ package com.osmigesameem;
 
 import com.osmigesameem.helper_tools.HelperTools;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public class Hummingbird {
     static HashMap<String, String> questionDictionary = new HashMap<>();
+    String dataPath = "src/main/java/com/osmigesameem/data/questionDictionary.csv";
 
-    public static void run(){
+    public static void run() throws IOException {
         boolean running = true;
         int counter = 0;
         // currently initialize the hashmap
-        init();
+        //init();
         // AI introduces itself
         HelperTools.introduceSelf();
         do {
@@ -43,10 +45,11 @@ public class Hummingbird {
 
     }
 
-    private static String answerQuestion() {
+    private static String answerQuestion() throws IOException {
         // getting user's question
        String userQuestion = HelperTools.getAnswer("What is your question? ");
        // checking if question is on the 'questionDictionary'
+        questionDictionary = HelperTools.readFromFile("src/main/java/com/osmigesameem/data/questionDictionary.csv");
        if (questionDictionary.containsKey(userQuestion)){
            String answer = questionDictionary.get(userQuestion);
            return answer;
