@@ -1,0 +1,26 @@
+Sure!
+
+it looks like if would have these functions
+
+questionDictionary = hashmap(question, answer)
+
+askQuestion(question) -> // user asks question or ai?
+    if question in questionDictionary:
+        input = questionDictionary(question) + Type (b) if the answer is incorrect
+        if input == b
+            input = "How would you answer it instead?"
+            questionDictionary(question) = input
+            Ok, ill learn from
+
+    else:
+        input = hmmm... i don't know that one, how would you answer it?
+        questionDictionary(question) = input
+        Ok, i'll learn from that
+
+input = hi! im an ai! what question do you have?
+while True
+  askQuestion(question)
+  input = any other questions?
+  if input has no
+      break
+```
